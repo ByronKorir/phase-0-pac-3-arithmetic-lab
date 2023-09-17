@@ -10,7 +10,8 @@ before(function(done) {
     presets: ['env']
   });
 
-  //const src = path.resolve(__dirname, '..', 'index.js');
+  const src = path.resolve(__dirname, '..', 'index.js');
+ 
 
   jsdom.env('<div></div>', [], {src: babelResult.code}, (err, window) => {
     if (err) {
